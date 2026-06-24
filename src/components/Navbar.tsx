@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,6 +19,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
   return (
         <header
         className="
@@ -31,7 +33,18 @@ export default function Navbar() {
           
           {/* Logo */}
           <Link
-            href="/">
+  href="/"
+  onClick={() => {
+    setIsOpen(false);
+
+    if (pathname === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }}
+          >
             <Image
               src={logo}
               alt="Crash Cover Logo"
@@ -45,9 +58,17 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-12">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
+                <Link
+    key={link.name}
+    href={link.href}
+    onClick={() => {
+      if (link.name === "Home" && pathname === "/") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    }}
                 className="
                   relative
                   text-[15px]
@@ -78,8 +99,8 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
 
 
-            <Link
-              href="/contact"
+            <a
+              href="/#contact"
               className="
                 rounded-lg
                 bg-[#0891B2]
@@ -94,7 +115,7 @@ export default function Navbar() {
               "
             >
               Request Vehicle
-            </Link>
+            </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden"
@@ -131,7 +152,7 @@ export default function Navbar() {
       ))}
 
       <Link
-        href="/contact"
+        href="/#contact"
         onClick={() => setIsOpen(false)}
         className="
           mt-4

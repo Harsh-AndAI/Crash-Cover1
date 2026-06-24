@@ -56,7 +56,7 @@ export default function CTASection() {
             {/* Right Side */}
             <div className="flex flex-col items-center lg:items-end gap-5">
 
-              <Link
+              <a
                 href="#contact"
                 className="
                   w-full
@@ -75,7 +75,7 @@ export default function CTASection() {
                 "
               >
                 Request Vehicle Now
-              </Link>
+              </a>
 
               <a
                 href="tel:+61000000000"

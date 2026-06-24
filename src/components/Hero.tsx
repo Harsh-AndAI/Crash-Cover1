@@ -4,7 +4,7 @@ import heroCar from "@/assets/images/hero-car2.png";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section id="hero" className="relative overflow-hidden bg-white">
       <div className="
             absolute
             right-0
@@ -97,7 +97,7 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link
-                href="/contact"
+                href="#contact"
                 className="
                 bg-[#0891B2]
                 text-white

@@ -50,9 +50,30 @@ export default function ContactForm() {
   ];
 
   return (
+  <section
+    id="contact"
+    className="py-24 bg-[#F8FAFC] scroll-mt-32"
+  >
+    <div className="max-w-5xl mx-auto px-6">
+
+      <div className="text-center mb-12">
+        <p className="uppercase tracking-[3px] text-[#0891B2] font-semibold">
+          Contact Us
+        </p>
+
+        <h2 className="mt-3 text-4xl md:text-5xl font-bold text-[#111111]">
+          Request A Replacement Vehicle
+        </h2>
+
+        <p className="mt-4 text-slate-600">
+          Complete the form below and our team will contact you shortly.
+        </p>
+      </div>
+
+      <div className="w-full bg-white rounded-[32px] shadow-xl border border-slate-200 overflow-hidden">
     <div className="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
       {/* Header */}
-      <div className="bg-blue-900 px-6 sm:px-10 py-5">
+      <div className="bg-gradient-to-r from-[#0891B2] to-[#0E7490] px-6 sm:px-10 py-6">
         <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
           Apply online now
         </h2>
@@ -80,7 +101,7 @@ export default function ContactForm() {
               value={formData.firstName}
               onChange={handleChange}
               placeholder="John"
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-blue-700 transition"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:border-[#0891B2] transition"
             />
           </div>
 
@@ -100,7 +121,7 @@ export default function ContactForm() {
               value={formData.lastName}
               onChange={handleChange}
               placeholder="Smith"
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-blue-700 transition"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:border-[#0891B2] transition"
             />
           </div>
 
@@ -120,7 +141,7 @@ export default function ContactForm() {
               value={formData.mobile}
               onChange={handleChange}
               placeholder="07700 900000"
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-blue-700 transition"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:border-[#0891B2] transition"
             />
           </div>
 
@@ -140,7 +161,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="john.smith@example.com"
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-blue-700 transition"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:border-[#0891B2] transition"
             />
           </div>
 
@@ -157,11 +178,11 @@ export default function ContactForm() {
                     key={option.value}
                     type="button"
                     onClick={() => handleFaultSelect(option.value)}
-                    aria-pressed={isSelected}
-                    className={`w-full rounded-lg border px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-blue-700 ${
+                    aria-pressed={isSelected ? "true" : "false"}
+                    className={`w-full rounded-lg border px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-[#0891B2] ${
                       isSelected
-                        ? "bg-blue-900 border-blue-900 text-white shadow-sm"
-                        : "bg-slate-50 border-slate-300 text-slate-700 hover:bg-slate-100"
+                        ? "bg-[#0891B2] border-[#0891B2] text-white shadow-sm"
+                        : "bg-white border-slate-300 text-slate-700 hover:bg-slate-100"
                     }`}
                   >
                     {option.label}
@@ -187,7 +208,7 @@ export default function ContactForm() {
               value={formData.postcode}
               onChange={handleChange}
               placeholder="SW1A 1AA"
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-blue-700 transition uppercase"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:border-[#0891B2] transition uppercase"
             />
           </div>
 
@@ -207,7 +228,7 @@ export default function ContactForm() {
               value={formData.regNumber}
               onChange={handleChange}
               placeholder="AB12 CDE"
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-blue-700 transition uppercase"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:border-[#0891B2] transition uppercase"
             />
           </div>
 
@@ -227,7 +248,7 @@ export default function ContactForm() {
               value={formData.vehicleMakeModel}
               onChange={handleChange}
               placeholder="Ford Focus"
-              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-blue-700 transition"
+              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:border-[#0891B2] transition"
             />
           </div>
         </div>
@@ -239,12 +260,15 @@ export default function ContactForm() {
           </p>
           <button
             type="submit"
-            className="order-1 sm:order-2 w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-red-600 px-8 py-3 text-sm font-bold text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 active:bg-red-800 transition"
+            className="order-1 sm:order-2 w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-[#0891B2] px-8 py-3 text-sm font-bold text-white shadow-sm hover:bg-[#0E7490] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 active:bg-[#0E7490] transition"
           >
             Submit Application
           </button>
         </div>
       </form>
     </div>
+    </div>
+    </div>
+  </section>
   );
 }
