@@ -14,23 +14,18 @@ export default function Footer() {
   return (
     <footer className="mt-20 bg-[#F8FAFC] border-t border-gray-200">
       <div className="max-w-[1400px] mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-12">
 
           {/* Company */}
-          <div className="col-span-2 lg:col-span-1">
+          <div className="sm:col-span-2 md:col-span-3 lg:col-span-1">
             <Image
               src={logo}
               alt="Crash Cover Logo"
               width={220}
               height={80}
-              className="mb-5"
+              className="mb-5 max-w-[180px] sm:max-w-[220px] h-auto"
             />
 
-            <p className="text-[15px] leading-7 text-slate-600">
-              Crash Cover is a Melbourne-based accident replacement
-              vehicle provider helping not-at-fault drivers stay on
-              the road after an accident.
-            </p>
 
             <p className="mt-4 text-sm font-semibold text-[#0891B2]">
               Your Trusted Mobility Partner
@@ -39,7 +34,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[20px] font-bold text-[#111111] mb-5">
+            <h3 className="text-lg font-bold text-[#111111] mb-4 sm:mb-5">
               Quick Links
             </h3>
 
@@ -111,7 +106,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-[20px] font-bold text-[#111111] mb-5">
+            <h3 className="text-lg font-bold text-[#111111] mb-4 sm:mb-5">
               Services
             </h3>
 
@@ -132,7 +127,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-[20px] font-bold text-[#111111] mb-5">
+            <h3 className="text-lg font-bold text-[#111111] mb-4 sm:mb-5">
               Contact Us
             </h3>
 
@@ -142,7 +137,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@crashcover.com.au"
-                  className="hover:text-[#0891B2]"
+                  className="hover:text-[#0891B2] break-all block"
                 >
                   info@crashcover.com.au
                 </a>
@@ -158,7 +153,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="text-[20px] font-bold text-[#111111] mb-5">
+            <h3 className="text-lg font-bold text-[#111111] mb-4 sm:mb-5">
               Service Areas
             </h3>
 
@@ -169,16 +164,22 @@ export default function Footer() {
               <li>Victoria Wide</li>
             </ul>
 
-            <h3 className="text-[20px] font-bold text-[#111111] mt-10 mb-5">
+            <h3 className="text-lg font-bold text-[#111111] mt-8 lg:mt-10 mb-4 sm:mb-5">
               Follow Us
             </h3>
 
             <div className="flex gap-5 text-2xl text-slate-500">
-              <FaLinkedin className="cursor-pointer hover:text-[#0891B2] hover:scale-110 transition-all duration-300" />
+              <span className="cursor-pointer hover:text-[#0891B2] hover:scale-110 transition-all duration-300">
+                <FaLinkedin />
+              </span>
 
-              <FaInstagram className="cursor-pointer hover:text-[#0891B2] hover:scale-110 transition-all duration-300" />
+              <span className="cursor-pointer hover:text-[#0891B2] hover:scale-110 transition-all duration-300">
+                <FaInstagram />
+              </span>
 
-              <FaFacebookF className="cursor-pointer hover:text-[#0891B2] hover:scale-110 transition-all duration-300" />
+              <span className="cursor-pointer hover:text-[#0891B2] hover:scale-110 transition-all duration-300">
+                <FaFacebookF />
+              </span>
             </div>
           </div>
         </div>
