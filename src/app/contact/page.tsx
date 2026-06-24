@@ -1,3 +1,9 @@
+import ContactForm from "@/components/ContactForm";
+
 export default function ContactPage() {
-  return <div>Contact Page</div>;
+  return (
+    <main className="min-h-screen py-12 px-4">
+      <ContactForm />
+    </main>
+  );
 }
